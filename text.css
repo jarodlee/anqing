@@ -1,6 +1,5 @@
 @charset "utf-8";
 .蓝色加粗 {
 	color: #0034FF;
-	text-decoration: overline;
 	font-weight: bold;
 }
