@@ -20,6 +20,38 @@
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=580 height=450 src="https://music.163.com/outchain/player?type=0&id=2753070927&auto=1&height=430"></iframe>
 
+  <div class="container">
+ <div class="start"></div>
+ <div class="stop"></div>
 
+ <div class="points">
+  <div class="c1"></div>
+  <div class="d"></div>
+  <div class="e"></div>
+  <div class="f"></div>
+  <div class="g"></div>
+  <div class="a"></div>
+  <div class="h"></div>
+  <div class="c2"></div>
+ </div>
+
+ <input type="range" value="131" min="131" step="1" max="261" class="frequency"/>
+
+ <div class="waves" title="oscillator type">
+  <input type="radio" name="wave" id="sine" checked="checked" />
+	<label for="sine"></label>
+  <input type="radio" name="wave" id="triangle" />
+	<label for="triangle"></label>
+  <input type="radio" name="wave" id="sawtooth" />
+	<label for="sawtooth"></label>
+  <input type="radio" name="wave" id="square" />
+	<label for="square"></label>
+ </div>
+	
+ <input type="range" class="volume" value="1" min="0" step=".1" max="1" title="volume"/>
+	<canvas>
+</div>
+  
+    <script src="js/index.js"></script>
 </body>
 </html>
