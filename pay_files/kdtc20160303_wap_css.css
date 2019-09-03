@@ -1,0 +1,22 @@
+body{ padding:0px; margin:0px; background:#E1E1E1}
+ul,li,h3,h2,p{ padding:0px; margin:0px; list-style:none;}
+img{ display:block; border:0px;}
+.tc{ background:#f6f6f6; border-radius:8px; width:100%; margin:0 auto; text-align:center; padding-top:10px;}
+.tc h2{text-align:center; background:url(../Images/kdtc20160303_wap_1.jpg) no-repeat left center; height:66px; display:inline-block; padding-left:70px; margin:0 auto; line-height:66px; font-size:1.5em; margin-top:50px;}
+.tc p{ display:block; width:95%; margin:0 auto; line-height:30px; text-align:left; font-size:0.9em; padding-top:10px;}
+.tc p span{ display:block; font-weight:bold;}
+.tc p b{ color:#ff8200;}
+.tc p b a{ color:#ff8200;}
+.tc p b a:hover{ color:#F36;}
+
+.tc h3{ display:block; width:90%; margin:0 auto; text-align:center; border-top:1px dashed #666; line-height:40px; font-size:1.0em;}
+.tc h3 a{ color:#ff8200;}
+.tc .btn{ padding:5px 0px 5px 0;}
+.tc .btn a{ display:inline-block;  width:25%; text-align:center; line-height:45px; height:45px; border-radius:8px; text-align:center; background:#ff8200; color:#FFFFFF; text-decoration:none;}
+.tc .btn a.a1{ margin-right:15px;}
+.tc .btn a:hover{ background:#e37604;}
+
+
+.fff{ width:100%; display:block; margin:0 auto;}
+.fff p{display:block; width:100%; text-align:center;font-size:0.9em;}
+.fff img{ width:40%;}

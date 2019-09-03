@@ -1,0 +1,3 @@
+//隐藏“站长统计”字样
+document.write("<style>#cnzz_stat_icon_1254989816{	display:none;}a[title='站长统计']{	display:none;}</style>");
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254989816'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1254989816' type='text/javascript'%3E%3C/script%3E"));
