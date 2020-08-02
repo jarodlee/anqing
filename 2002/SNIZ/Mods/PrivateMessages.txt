@@ -1,0 +1,55 @@
+Private Messages Mod for Snitz Forums v3.1 Final and newer
+
+Ignore User feature not yet implemented
+
+New Table: - FORUM_PM
+
+Run the included  PMDBSETUP.asp file to setup the new table.
+
+
+In default.asp  you need to add this line.
+
+<!--#include file="privatemess.asp"-->
+
+Where ever you want the private messages to appear
+
+
+Mine looks like this:
+
+<%
+				else
+					blnHiddenForums = true
+				end if ' ChkDisplayForum() 
+				rsForum.MoveNext
+			loop
+		end if
+		rs.MoveNext
+	loop
+ end if 
+%>
+<!--#include file="privatemess.asp"-->
+<%
+if strShowStatistics = "1" then
+	WriteStatistics
+end if %>
+    </table>           
+    </td>
+  </tr>
+<tr>
+	<td>
+		<table width="100%">
+		<tr>
+			<td>
+			<font face="<% =strDefaultFontFace %>" size="<% =strFooterFontSize %>">
+			<img alt="New Posts" src="icon_folder_new.gif" width=8 height=9> Contains new posts since last visit.<br>
+			<img alt="Old Posts" src="icon_folder.gif" width=8 height=9> No new posts since the last visit.<br>
+			</font>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+
+Then just put all of the other included files into your /forum directory.

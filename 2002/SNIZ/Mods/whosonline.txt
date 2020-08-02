@@ -1,0 +1,107 @@
+Who's Online! 
+There are some issues with this that need worked out!
+
+
+Following code inserted somewhere in formum.asp to show where the member is:
+
+###############################################
+Dim objConn, strConn, CheckInTime, SQL, User, Timedout, Date
+Dim objRS, strSQL, houron, minon, Datec
+Dim OnlineLocation
+OnlineLocation = "<a href=forum.asp?" & Request.QueryString & ">" & Request.QueryString("Forum_Title") & "</a>"
+  if Request.cookies("User")("Name") = "" then
+    User = Request.ServerVariables("REMOTE_ADDR") & "Guest"
+  else
+    User = Request.cookies("User")("Name")
+  end if
+	
+Date = DateToStr(strForumTimeAdjust)
+CheckInTime = DateDiff( "s", CDate("01/01/1970"), Now)
+	
+	set my_Conn = Server.CreateObject("ADODB.Connection")
+	my_Conn.Open strConnString
+	
+	strSql = "SELECT " & strTablePrefix & "ONLINE.UserID "
+	strSql = strSql & " FROM " & strTablePrefix & "ONLINE "
+	strSql = strSql & " WHERE " & strTablePrefix & "ONLINE.UserID = '" & user & "'"
+	
+	set rsWho =  my_Conn.Execute (strSql)
+		
+	    
+	Set objConn = Server.CreateObject("ADODB.Connection")
+	objConn.ConnectionString = strConnString
+	objConn.Open
+	SQL = "UPDATE FORUM_ONLINE SET M_BROWSE =  '" & OnlineLocation & "' , DateCreated = '" & Date & "' WHERE UserID = '" & User & "'"
+	objConn.Execute SQL
+	
+	
+    	
+    	TimedOut = CheckInTime - 3600      'time out the user
+	
+	SQL = "DELETE FROM FORUM_ONLINE WHERE CheckedIn < '" & TimedOut & "'"
+	objConn.Execute SQL
+###############################################
+
+
+
+New Table = FORUM_ONLINE
+Fields (currently all text but needs to be optimized)
+UserID
+Status
+DateCreated
+CheckedIn
+M_BROWSE
+###############################################
+
+
+
+To insert this into default.asp add
+<!--#include file="online2.asp"-->
+Somwhere before this bit of code:
+<table width="85%">
+  <tr>
+    <td>
+    <font face="<% =strDefaultFontFace %>" size="<% =strFooterFontSize %>">
+    &nbsp;<img alt="New Posts" src="icon_folder_new.gif" width=15 height=15> Contains new posts since last visit.<br>
+    &nbsp;<img alt="Old Posts" src="icon_folder.gif" width=15 height=15> No new posts since the last visit.<br>
+    </font>
+    </td>
+  </tr>
+</table>
+
+Mine Looks like this:
+<%					if (mlev = 4 or mlev = 3) or (lcase(strNoCookies) = "1") then %>
+        <td bgcolor="<% =strForumCellColor %>" align=center valign=top nowrap>
+        <% call ForumAdminOptions %>
+        </td>
+<%					end if 
+response.write "</tr>"
+
+				end if 
+		end if 
+				rsForum.movenext 
+			loop 
+		end if 
+		rs.MoveNext 
+	loop 
+ end if %>
+<!--#include file="privatemess.asp"-->
+<!--#include file="online2.asp"-->
+<!--#include file="statistics.asp"-->
+    </table>           
+    </td>
+  </tr>
+</table>
+<center>
+<table width="85%">
+  <tr>
+    <td>
+    <font face="<% =strDefaultFontFace %>" size="<% =strFooterFontSize %>">
+    &nbsp;<img alt="New Posts" src="icon_folder_new.gif" width=15 height=15> Contains new posts since last visit.<br>
+    &nbsp;<img alt="Old Posts" src="icon_folder.gif" width=15 height=15> No new posts since the last visit.<br>
+    </font>
+    </td>
+  </tr>
+</table>
+</center>
+<% set rs = nothing %>

@@ -1,0 +1,71 @@
+Mod Commander
+for Snitz Forums 2000 V3.0 Final
+bugs, suggestions, etc to webmaster@animedj.com
+ver 1.00 - october 27, 2000
+
+New Files:
+modCMD.asp
+modCMD.mod
+modCMD.txt
+
+Modified Files:
+admin_home.asp
+
+
+* NOTE  :   The contents of this zip has to be unzip inside a "MODS" directory in your forums folder
+
+Open admin_home.asp
+##################################################################
+
+Approx. Line 86 before 
+    <!--#INCLUDE file="inc_footer.asp" -->
+    
+Add:
+    <!--#INCLUDE FILE="mod/modCMD.asp" -->
+
+##################################################################
+
+* USE   :   you need to create a new empty text file with the extension ".mod" If you want to add a readme file, use the same name as the ".mod" file but only with extension ".txt"
+
+            A mod file contains 4 lines :
+            
+contents of outofservice.mod
+##################################################################
+
+Out of Service    ####    name of the mode
+down.asp    ####    name of console page, or if there isn't one leave a blank line
+true    ####    true or false there is a readme file
+1.00    ####    version number
+down_setup.asp    ####    setup script
+animedj    ####    author of mod
+
+
+* That's basically it. It's just a little help for mod creators. Any questions, send an email to webmaster@animedj.com
+
+
+
+okay, MOD commander has been updated to include the 2 new fields (setup script link and author), the order is a little different Huwr, so it won't mess up with other MODS out at the moment.
+
+And about the FORUM_MODS it works like this. Teh table is 3 fields (M_NAME, M_CODE, M_VALUE) and for example let's take slash mod.
+
+I want to store the preference of how many posts to show so I'll add the following values in the table:
+
+under M_NAME : slash (mod name)
+under M_CODE : slPosts (name of the value)
+under M_VALUE : 5 (value)
+
+and I keep adding as many recordsets as my slash mod needs, then to retrieve the values I use in this case dictionary object like this :
+
+with a SQL query I get all the M_CODE and M_VALUE where the M_NAME is slash and the with my dictionary object (objDict) i load up the values :
+
+while not objRec.EOF 
+objDict.Add objRec.Fields.Item("m_code").Value, objRec.Fields.Item("m_value").Value
+objRec.moveNext
+wend 
+
+slPosts = cint(objDict.Item("slPosts"))
+slLength = cint(objDict.Item("slLength"))
+slSort = objDict.Item("slSort")
+
+and that's basically it. and I can keep adding values to that table without touch the other tables. I hope that helps.
+

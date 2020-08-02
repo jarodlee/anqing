@@ -1,0 +1,87 @@
+香港CGI-ASP软件网 k666软件园 收集 http://www.k666.com
+www.kk66.com  vod.kk66.com电影下载k666服务器空间出租www.2666.net
+技术论坛地址：http://www.kk66.com  k666音乐屋www.vv66.com
+如你转载！！请不要删除以上信息，谢谢！
+
+
+
+
+########## Snitz Forums 2000 Version 3.1 SR4 ####################
+#                                                               #
+#  汉化修改: 资源搜罗站                                         #
+#  电子邮件: cgier@21cn.com                                     #
+#  主页地址: http://www.sdsea.com                               #
+#            http://www.99ss.net                                #
+#            http://www.cdown.net                               #
+#	     http://www.wzdown.com                              #
+#	     http://www.13888.net                               #
+#  论坛地址:http://ubb.yesky.net                                #
+#  最后修改日期: 2001/03/12    中文版本：Version 3.1 SR4        #
+#################################################################
+# 原始来源                                                      #
+# Snitz Forums 2000 Version 3.1 SR4                             #
+# Copyright 2000 http://forum.snitz.com - All Rights Reserved   #
+#################################################################
+#【版权声明】                                                   #
+#                                                               #
+# 本软体为共享软体(shareware)提供个人网站免费使用，请勿非法修改,#
+# 转载，散播，或用于其他图利行为，并请勿删除版权声明。          #
+# 如果您的网站正式起用了这个脚本，请您通知我们，以便我们能够知晓#
+# 如果可能，请在您的网站做上我们的链接，希望能给予合作。谢谢！  #
+#################################################################
+# 请您尊重我们的劳动和版权，不要删除以上的版权声明部分，谢谢合作#
+# 如有任何问题请到我们的论坛告诉我们                            #
+#################################################################
+#【安装说明】                                                   #
+# 本论坛支持access2000、access97、MSSQL、MYSQL四种数据库        #
+# 基本上解压后直接上传就能用了，不用怎么修改，如果你要换成其他  #
+# 数据库可以打开congif.asp修改连接段参数.                       #
+#################################################################
+#下面是config.asp里面的各种连接段说明                           #
+#################################################################
+'strDBType = "sqlserver"  #使用MSSQL数据库
+strDBType = "access"      #使用ACCESS数据库
+'strDBType = "mysql"      #使用MYSQL数据库
+
+要使用哪种数据库把前面的'去掉，默认使用ACCESS数据库
+#################################################################
+'strConnString = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=c:\inetpub\dbroot\snitz_forums_2000.mdb" 
+
+-------------------------------------------------
+'strConnString = "DRIVER={Microsoft Access Driver (*.mdb)}; DBQ=" & Server.MapPath("tools/snitz2000.mdb")
+
+-------------------------------------------------
+strConnString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & Server.MapPath("tools/snitz2000.mdb")
+
+-------------------------------------------------
+'strConnString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=e:\domains\huwr.121host.net\user\data\snitz_forums_2000.mdb;" 
+
+以上四种都是使用ACCESS数据库连接方法，去掉strConnString前面的'就行了，默认使用第三种
+
+#################################################################
+'strConnString = "driver={SQL Server};server=192.168.0.2;uid=sa;pwd=wynnston;database=HRForum" 
+
+这里是MSSQL连接段，怎么连不用说了吧？
+#################################################################
+'strConnString = "driver=MySQL;server=SERVER_NAME;uid=MYSQL_USER;pwd=PARRWORD;database=DATABASE_NAME" 
+
+最后这里的是MYSQL连接段
+
+#################################################################
+论坛的默认管理用户名跟密码都是admin
+可以在首页的[资料]里面修改...
+
+ _________________________ 
+|       合作站点          |
+|-------------------------|
+|  http://hjha.6to23.com  |
+|  http://one.6to23.com   |
+| http://www.breaknet.net |          
+|_________________________|
+
+资源论坛：http://ubb.yesky.net
+镜像站点：http://down.my0754.com/
+镜像站点：http://www.rzjh.com/99ss/
+镜像站点：http://www.365tian.net/99ss/
+镜像站点：http://www.haoasp.com/99ss/
+镜像站点：http://www.feifan21.com/99ss/

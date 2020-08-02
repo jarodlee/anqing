@@ -1,0 +1,71 @@
+Database Tool
+
+Instructions.
+
+The file is formatted into sections, which are delimited with ini file style tags.
+The allowed Tags are
+[CREATE] - for creating new tables
+[ALTER]  - for Adding columns to an existing table
+[INSERT] - Inserting records into a table
+[UDATE]  - Updating specific values
+
+Because of the nature of the FSO, it is essential that the Tags are used in the correct
+order as shown above.
+
+
+Section Formatting.
+
+MyTest Mod - The fist line of the file is the name of the Mod the Db setup is for.
+
+Create table sections
+
+[CREATE]
+TEST_TABLE			Name of the Table to create
+TABLE_ID			Name of the ID Field, leave a blank line if no ID field is required
+field1;int;NULL;0		The rest of the lines in this section are for the field definitions
+field2;varchar(20);;		They should all follow the same Format: FIELDNAME;FIELDTYPE;NULL;DEFAULT
+					FIELDNAME; Name of column to add
+					FIELDTYPE; Valid field Types are smallint,int,varchar,text. 
+					NULL;	   Column allows NULL leave blank for Not allow
+					DEFAULT	   default value for new field
+					Any missing items should be left blank, the ';' deleimeters should all appear.
+					i.e.
+					field1;int;NULL;0 will create an integer field with a default value of 1 that allows NULL
+					field2;varchar(20);; will create a varchar field with no default that does not allow NULLs
+[END]				End of create table tag.
+
+Any more Create table sections should appear under the first and should not be split by anyother tags.
+
+
+Alter Table sections
+
+[ALTER]				Alter table start tag
+TEST_TABLE			Name of table to be altered
+field3;int;NULL;		Field Definitions - Format: As above
+[END]				End Alter table tag
+[ALTER]
+TEST_TABLE
+field3;text;NULL;'default'	Text values should be enclosed in single quotes.
+[END]
+
+
+Insert records sections.
+
+[INSERT]			Insert Values start Tag
+TEST_TABLE			Name of table you whish to insert values into
+(field1,field2);(12,'test')	Field Defs - This uses the same basic definition as an insert
+				statement. The first parameter being a comma delimeted list of fields
+				and the second the corresponding values.Each parameter enclosed by ()
+					i.e. (field1,....);(value1,....)
+[END]				End of Table insert Tag
+
+
+Update Table sections
+
+[UPDATE]			Table Update start Tag
+TEST_TABLE2			Name of Table to update
+field22;'B';TABLE_ID2 = 1	Field definitions - Format: FIELDNAME;VALUE;WHERE CLAUSE
+				FIELDNAME; - Name of field to be updated
+				VALUE;	  - New value for field
+				WHERE CLAUSE - Criteria to specify records to be updated, blank if All records
+[END]				End of update tag

@@ -1,0 +1,203 @@
+Huw's Forum DB Changes
+[CREATE]
+BOOKMARKS
+BOOKMARK_ID
+B_MEMBERID;int;;
+B_TOPICID;int;;
+[END]
+[CREATE]
+VOTELOG
+ID
+poll_id;int;;
+ip;varchar(20);NULL;
+datum;date;NULL;
+[END]
+[CREATE]
+POLL
+ID
+question;varchar(255);NULL;
+answer1;varchar(50);NULL;
+count1;int;NULL;0
+answer2;varchar(50);NULL;
+count2;int;NULL;0
+answer3;varchar(50);NULL;
+count3;int;NULL;0
+answer4;varchar(50);NULL;
+count4;int;NULL;0
+answer5;varchar(50);NULL;
+count5;int;NULL;0
+answer6;varchar(50);NULL;
+count6;int;NULL;
+answer7;varchar(50);NULL;
+count7;int;NULL;0
+answer8;varchar(50);;
+count8;int;NULL;0
+createdwhen;smalldatetime;;
+active;bit;;1
+[END]
+[CREATE]
+MODS
+
+M_NAME;varchar(50);;
+M_CODE;varchar(50);;
+M_VALUE;memo;;
+[END]
+[DELETE]
+MODS
+(M_NAME = 'Attachment' OR M_NAME = 'HModEnable')
+[END]
+[INSERT]
+MODS
+(M_NAME,M_CODE,M_VALUE);('Attachment','faMaxSize','512')
+(M_NAME,M_CODE,M_VALUE);('Attachment','faExtensions','.zip:.mdb:.txt:.asp')
+(M_NAME,M_CODE,M_VALUE);('HModEnable','Pmessages','1')
+(M_NAME,M_CODE,M_VALUE);('HModEnable','UserFields','1')
+(M_NAME,M_CODE,M_VALUE);('HModEnable','PollMentor','0')
+(M_NAME,M_CODE,M_VALUE);('HModEnable','SideMenu','0')
+(M_NAME,M_CODE,M_VALUE);('HModEnable','Attachment','0')
+(M_NAME,M_CODE,M_VALUE);('HModEnable','NewMemberPM','1')
+(M_NAME,M_CODE,M_VALUE);('HModEnable','imageURLPath','images/')
+(M_NAME,M_CODE,M_VALUE);('NewMemPM','Subject','Enter your subject line here')
+(M_NAME,M_CODE,M_VALUE);('NewMemPM','Message','Enter your message here')
+(M_NAME,M_CODE,M_VALUE);('NewMemPM','OnOff','0')
+[END]
+[CREATE]
+SMILE_CAT
+CAT_ID
+CAT_NAME;varchar (40);NULL;
+[END]
+[INSERT]
+SMILE_CAT
+(CAT_NAME);('Snitz')
+(CAT_NAME);('Other')
+[END]
+[CREATE]
+SMILES
+ID
+SMILE_URL;varchar (40);;
+SMILE_CODE;varchar (10);;
+SMILE_NAME;varchar (20);;
+CAT_ID;int;;1
+[END]
+[INSERT]
+SMILES
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_angry.gif',':(!','Angry',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_blackeye.gif', 'B)', 'Black Eye',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_dissapprove.gif', 'V', 'Dissapprove',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_dead.gif', 'XX(', 'Dead',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_shock.gif', ':O', 'Shocked',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_approve.gif', '^', 'Approve',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_question.gif', '?', 'Question?',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_blush.gif', ':I', 'Blushing',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_sad.gif', ':(', 'Sad',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_shy.gif', '8)', 'Shy',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile.gif', ':)', 'Smile:)',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_evil.gif', '}:)', 'Evil',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_big.gif', ':D', 'Big Smile',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_cool.gif', '8D', 'Cool Guy',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_sleepy.gif', '|)', 'Sleepy/Tired',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_clown.gif', ':o)', 'Clown',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_kisses.gif', ':X', 'Kisses',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_tongue.gif', ':p', 'Tongue :P',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_wink.gif', ';)', 'Wink',1)
+(SMILE_URL,SMILE_CODE,SMILE_NAME,CAT_ID);('icon_smile_8ball.gif', '8', '8 Ball',1)
+[END]
+[CREATE]
+USERFILES
+F_FILEID
+MEMBER_ID;int;;
+F_FILENAME;varchar (255);;
+F_FILESIZE;int;NULL;
+F_REPLY_ID;int;NULL;
+F_TOPIC_ID;int;NULL;
+[END]
+[CREATE]
+EMAIL_CONFIG
+
+M_TYPE;varchar (15);NULL;
+M_SUBJECT;varchar (100);NULL;
+M_MESSAGE;memo;NULL;
+[END]
+[INSERT]
+EMAIL_CONFIG
+(M_TYPE,M_SUBJECT,M_MESSAGE);('newreply','[forum_title] - Reply to your posting','Hello [user_name]')
+(M_TYPE,M_SUBJECT,M_MESSAGE);('replynot','[forum_title] - Reply to a posting','Hello [user_name]')
+[END]
+[CREATE]
+PM
+M_ID
+M_SUBJECT;varchar (50);NULL;
+M_FROM;int;NULL;
+M_TO;int;NULL;
+M_SENT;varchar (50);NULL;
+M_MESSAGE;memo;NULL;
+M_PMCOUNT;varchar (50);NULL;
+M_READ;int;NULL;0
+M_MAIL;varchar (50);NULL;
+M_OUTBOX;smallint;NULL;
+[END]
+[CREATE]
+USERFIELDS
+USR_FIELD_ID
+USR_LABEL;varchar (40);NULL;
+USR_FIELDTYPE;varchar (1);NULL;
+USR_SHORTNAME;varchar (10);NOT NULL;
+[END]
+[CREATE]
+MEMBERFIELDS
+
+MEMBER_ID;int;NOT NULL;
+USR_FIELD_ID;smallint;NOT NULL;
+USR_VALUE;varchar (50);NULL;
+[END]
+[CREATE]
+ONLINE
+
+UserID;varchar (100);;
+UserIP;varchar (40);NULL;
+LastChecked;varchar (100);NULL;
+DateCreated;varchar (100);;
+CheckedIn;varchar (100);;
+M_BROWSE;memo;NULL;
+[END]
+[ALTER]
+MEMBERS
+M_PMEMAIL;int;NULL;0
+M_PMRECEIVE;int;NULL;1
+M_ALLOWDOWNLOADS;int;NULL;1
+M_ALLOWUPLOADS;int;NULL;1
+[END]
+[ALTER]
+FORUM
+F_CREATED;varchar (40);NULL;
+FORUM_ORDER;int;NULL;1
+F_HIDDEN;smallint;NULL;0
+F_URLIMAGE;varchar(100);NULL;
+[END]
+[UPDATE]
+FORUM
+F_HIDDEN;1;F_PRIVATEFORUMS IN (5,6,8)
+[END]
+[ALTER]
+CATEGORY
+CAT_ORDER;int;NULL;1
+[END]
+[CREATE]
+ANNOUNCE
+A_ID
+A_AUTHOR;varchar(50);;
+A_SUBJECT;varchar(50);;
+A_MESSAGE;text;;
+A_START_DATE;varchar(50);;
+A_END_DATE;varchar(50);;
+[END]
+[CREATE]
+EVENTS
+EVENT_ID
+DATE_ADDED;varchar(20);NULL;
+START_DATE;varchar(20);NULL;
+END_DATE;varchar(20);NULL;
+EVENT_TITLE;varchar(50);NULL;
+EVENT_DETAILS;memo;NULL;
+ADDED_BY;int;NULL;
+[END]

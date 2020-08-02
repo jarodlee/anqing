@@ -1,0 +1,106 @@
+Minimizing Categories 
+by Dave Maxwell 
+
+(Thanks Dave! This is Great!!)
+
+
+This code allows a user to "minimize" a category.  This is a variation of the one I found at vBulletin, 
+but I think it's pretty unique.  
+
+The coding also stores your category choices in a cookie so it will show up the same way the next time you come back
+to the page.
+The code is all in default.asp and is pretty simple:
+Between the include inc_functions.asp line and the include inc_top.asp line, add the following code:
+
+========================================================
+
+<%
+set my_Conn = Server.CreateObject("ADODB.Connection")
+my_Conn.Open strConnString
+
+strSql = "Select Max(" & strTablePrefix & "CATEGORY.CAT_ID) as Max_ID "
+strSql = strSql & " FROM " & strTablePrefix & "CATEGORY"
+set rs0 = my_Conn.Execute (StrSql)
+
+MaxID = rs0("MAX_ID")
+rs0.close
+set rs0 = nothing
+
+If MaxID > 0 then
+   i = 1
+   do until i > cint(MaxID)
+        HideForumCat = "HideCat" & i
+		If Request.QueryString(HideForumCat) = "Y" then
+			Response.Cookies(HideForumCat) = "Y"
+			Response.Cookies(HideForumCat).Expires = dateAdd("d", 30, strForumTimeAdjust)
+		Else
+			If Request.QueryString(HideForumCat) = "N" then
+				Response.Cookies(HideForumCat) = "N"
+				Response.Cookies(HideForumCat).Expires = dateAdd("d", 30, strForumTimeAdjust)
+			End If
+		End If
+		i = i + 1
+	loop
+end if
+scriptname = request.servervariables("script_name")
+%>
+
+
+========================================================
+
+
+Next, Do a find on  
+
+=chkString(rs("CAT_NAME"),"display") 
+
+and replace that !!!entire line!!! with this code: (this occurs in two places the second one is the most important but can be done for both)
+
+        <td bgcolor="<% =strCategoryCellColor %>" colspan="<% if (strShowModerators = "1") or (mlev = 3 or mlev = 4) then if mlev = 3 then Response.Write("7") else Response.Write("6") end if else Response.Write("5") end if%>">
+<%		' This code will specify whether or not to show the forums under a category
+		HideForumCat = "HideCat" & rs("Cat_ID")
+		If Request.Cookies(HideForumCat) = "Y" then %>
+<%			if (InStr(1, ScriptName, "default.asp", 1)) then %>
+ 				<a href="<% =ScriptName & "?" %><% =HideForumCat & "=N" %>">
+<%			else %>
+ 				<a href="<% =ScriptName & "default.asp?" %><% =HideForumCat & "=N" %>">
+<%			end if %>
+<%		Else %>
+<%			if (InStr(1, ScriptName, "default.asp", 1)) then %>
+ 				<a href="<% =ScriptName & "?" %><% =HideForumCat & "=Y" %>">
+<%			else %>
+ 				<a href="<% =ScriptName & "default.asp?" %><% =HideForumCat & "=Y" %>">
+<%			end if %>
+<%		end if %>
+<font face="<% =strDefaultFontFace %>" size="<% =strDefaultFontSize %>" color="<% =strCategoryFontColor %>" size"+1"><b><% =ChkString(rs("CAT_NAME"),"display") %></b></font></A></td>
+
+
+========================================================
+
+
+Right after the Do a find on (about line 152).
+
+ChkDisplayHeader = false
+
+Before the next <tr>, add the following line:
+
+<%     if Request.Cookies(HideForumCat) <> "Y" then %>
+
+Right before the rsForum.movenext, add the following line:
+<%		end if %>
+
+
+========================================================
+
+
+That's it for the minimizing of Categories!!!
+
+Let me know if you have any questions or comments....
+
+Dave Maxwell
+--------------
+Self Certified Snitz Bug Swatter [:D]
+
+
+
+
+

@@ -1,0 +1,138 @@
+Announcements Mod v1.0
+by Richard Kinser
+Developed for use with Snitz Forums 2000 v3.1 SR3 Final +
+(will work with older versions but does have at least 1 quirk)
+
+**************************************************************
+Please read everything in this file before proceeding
+**************************************************************
+
+
+Files included
+(extract these files to your /forum directory)
+----------------------------------------------
+admin_announce_home.asp
+admin_edit_announce.asp
+admin_review_announce.asp
+admin_add_announce.asp
+icon_announce.gif
+inc_announce.asp
+pop_announce_delete.asp
+view_announcements.asp
+
+Database setup related (can be deleted after use)
+(extract these files to your /forum directory)
+-------------------------------------------------
+mod_dbsetup.asp
+forum_announcements.dbs
+
+only needed if you are using the Mod Commander
+(located in the included mods.zip)
+(extract these files to your /forum/mods directory)
+*if you use this file, then you will not need to edit admin_home.asp
+--------------------------------------------------------------------
+forum_announcements.mod
+forum_announcements.txt
+
+included forum files that have already been edited
+(located in the included editedfiles.zip)
+(extract these files to your /forum directory)
+--------------------------------------------------
+admin_home.asp
+inc_top.asp
+
+
+
+If you are not using the included inc_top.asp and admin_home.asp
+the following modifications need to be done:
+
+***************************
+In the file:  inc_top.asp *
+***************************
+
+Look at the very bottom for the following:
+------------------------------------------
+
+   </table>
+   </td>
+ </tr>
+</table>
+
+Replace the above with the following:
+-------------------------------------
+
+   </table>
+   </td>
+<%
+  if InstrRev(Request.ServerVariables("Path_Info"), "view_announcements.asp") = 0 then
+    if InstrRev(Request.ServerVariables("Path_Info"), "admin_") = 0 then
+	'## Forum_SQL - Build SQL to get forums via category
+	strSql = "SELECT " & strTablePrefix & "ANNOUNCE.A_ID "
+	strSql = strSql & "FROM " & strTablePrefix & "ANNOUNCE " 
+
+	set rschkAnnounce = my_Conn.Execute (strSql)
+
+	if rschkAnnounce.eof or rschkAnnounce.bof then '## No Announcements found in DB
+		Response.Write ""
+	Else
+%>
+	<tr>
+          <td>
+            <!--#INCLUDE FILE="inc_announce.asp" -->    
+	 </td>
+       </tr>
+<%	End If
+	set rschkAnnounce = nothing
+    end if
+  end if
+%>
+ </tr>
+</table>
+
+
+******************************
+In the file:  admin_home.asp *
+******************************
+
+
+Look for the lines of code that are similar to:
+
+        <LI><a href="admin_announce_home.asp">Announcement Center</a></LI>
+
+and insert the above line where you would like it to be show up.
+
+Here is how mine looks:
+
+        <p><b>Other Configuration Options and Features:</b>
+        <UL>
+        <LI><a href="admin_announce_home.asp">Announcement Center</a></LI>
+        <LI><a href="admin_moderators.asp">Moderator Setup</a></LI>
+        <LI><a href="admin_emaillist.asp">Email List</a></LI>
+        <LI><a href="admin_info.asp">Server Information</a></LI>
+        <LI><a href="admin_variable_info.asp">Forum Variables Information</a></LI>
+        <LI><a href="admin_count.asp">Update Forum Counts</a></LI>
+        <LI><a href="setup.asp">Check Installation</a><font size="-2"><b> (Run after each upgrade !)</b></font></LI>
+        </UL></p>
+
+
+TO SETUP THE DATABASE
+=====================
+
+I am including HuwR's mod_dbsetup.asp file to help with setting up the database.
+
+After all files have been uploaded and the inc_top.asp & admin_home.asp files have been
+modified as shown above, execute the mod_setup.asp file from your browser like this:
+
+for example, if you access your forum like this:  http://www.myserver.com/forum/default.asp
+
+you would type in the following for the database setup:  http://www.myserver.com/forum/mod_dbsetup.asp
+
+
+That's it!
+
+To access the Announcement Center goto Admin Options and there will be a new option called "Announcement Center"
+
+From there you will be able to Create New Announcements, Review/Edit & Delete Current Announcements.
+
+The Admin is also able to delete Announcements when viewing the announcements from the same screen that user's view
+the announcements.

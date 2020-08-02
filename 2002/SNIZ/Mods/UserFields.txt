@@ -1,0 +1,26 @@
+<b>Instructions.</b>
+
+Unzip...
+	admin_user_fields.asp, pop_ufield_table.asp, and pop_ufield_record.asp
+
+to your forum directory
+
+Copy the code in inc_functions_extra.asp to the end of the inc_functions.asp file
+
+If you have NOT modified
+
+	admin_config_members.asp
+	pop_profile.asp
+	inc_profile.asp
+	register.asp
+
+then unzip them to your forum directory. If you have already made changes to these files,
+you will find all the required changes are clearly commented.
+
+Finally unzip the member_profile_setup.asp to your forum directory and execute it in your 
+browser. (this will make the required DB changes)
+
+
+That's all folks...
+
+If you get any problems, contact me on huw@reddick.co.uk

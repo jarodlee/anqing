@@ -1,0 +1,25 @@
+Somewhere in topic.asp (up to your discretion of course) 
+Add the following line!
+
+<a href="print.asp?<%=Request.QueryString%>"><img border="0" src="print.gif" border=0></a>&nbsp;<a href="print.asp?<%=Request.QueryString%>"><font face="<% =strDefaultFontFace %>" size="<% =strDefaultFontSize-1 %>">Printer Friendly Version</font></a>
+
+To have it appear right above the table on the left. Search for this code.
+
+================================================================
+
+<table border="0" width="95%" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td bgcolor="<% =strTableBorderColor %>">
+    <table border="0" width="100%" cellspacing="1" cellpadding="4">
+       <tr>
+        <td align="center" bgcolor="<% =strHeadCellColor %>" width="<% =strTopicWidthLeft %>" <% if lcase(strTopicNoWrapLeft) = "1" then Response.Write(" nowrap") %>><b><font face="<% =strDefaultFontFace %>" size="<% =strDefaultFontSize %>" color="<% =strHeadFontColor %>">Author</font></b></td>
+        <td align="center" bgcolor="<% =strHeadCellColor %>" width="<% =strTopicWidthRight %>" <% if lcase(strTopicNoWrapRight) = "1" then Response.Write(" nowrap") %>><b><font face="<% =strDefaultFontFace %>" size="<% =strDefaultFontSize %>" color="<% =strHeadFontColor %>">Topic</font></b></td>
+<%	if (mlev = 4 or mlev = 3) then %>
+
+
+================================================================
+
+And add it right above the <table border="0" width="95%" cellspacing="0" cellpadding="0" align="center">
+
+Questions, comments, suggestions check out the thread at
+http://forum.snitz.com/forum/topic.asp?TOPIC_ID=181&FORUM_ID=25&CAT_ID=1&Topic_Title=Printer+Friendly+Version&Forum_Title=DEV+Design+Requests+W%2FCode+%28v4%29

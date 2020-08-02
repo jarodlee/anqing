@@ -1,0 +1,241 @@
+File Attachments
+for Snitz Forums 2000 V3.0 sr2
+bugs, suggestions, etc to huw.reddick@ntlworld.com
+ver 1.10 - 01/11/2000
+
+
+
+This Mod requires animedj's Mod Commander which is included in this zip.
+Install it fist as per the instructions.
+
+
+
+New Files - should be unzipped to /Mods/
+pop_upload.asp
+pop_download.asp
+UploadEngine.asp
+
+
+
+Changes to Forum Code files
+
+
+inc_profile.asp
+-------------------------------------------
+
+Search for this bit of code, should be arround line 555, and insert the code enclosed
+by the #############################
+
+
+<% if rs("M_NAME") = "Admin" then %>
+	<font face="<% =strDefaultFontFace %>" size="<% =strDefaultFontSize %>">Administrator</font>
+	<input type="hidden" value="3" name="Level">
+<% else %>
+        <SELECT value="1" name="Level">
+	<OPTION VALUE="1"<% if rs("M_LEVEL") = 1 then Response.Write(" selected") %>>Normal User
+	<OPTION VALUE="2"<% if rs("M_LEVEL") = 2 then Response.Write(" selected") %>>Moderator
+	<OPTION VALUE="3"<% if rs("M_LEVEL") = 3 then Response.Write(" selected") %>>Administrator
+	</SELECT>
+<% end if %>
+	</td>
+	</tr>
+<% '#################################### File Attachment ######################### %>
+	<tr>
+	<td bgColor="<% =strPopUpTableColor %>" align=right valign=top nowrap><b><font face="<% =strDefaultFontFace %>" size="<% =strDefaultFontSize %>">Attachments:&nbsp;</font></b></td>						
+	<td bgColor="<% =strPopUpTableColor %>" valign=top>
+	<input type="checkbox" name="allowDownloads" value="1"<% if rs("M_ALLOWDOWNLOADS") = 1 then Response.Write(" checked") end if%> > <font face="<% =strDefaultFontFace %>" size="<% =strDefaultFontSize %>">Allow Downloads</font><br>
+	<input type="checkbox" name="allowUploads" value="1"<% if rs("M_ALLOWUPLOADS") = 1 then Response.Write(" checked") end if%> > <font face="<% =strDefaultFontFace %>" size="<% =strDefaultFontSize %>">Allow Uploads</font>
+	</td>
+	</tr>
+<% '#################################### File Attachment ######################### %>
+<% end if
+	if not(strUseExtendedProfile)  then
+%>
+
+pop_profile.asp
+------------------------------------------------
+Look for the code 
+
+<%
+	case "goModify"
+
+		mLev = cint(ChkUser2(Request.Form("User"), Request.Form("Pass"))) 
+						
+		if mLev > 0 then  '## is Member
+			if mLev = 4 then
+
+			'## Forum_SQL
+			strSql = "SELECT " & strMemberTablePrefix & "MEMBERS.MEMBER_ID, " & strMemberTablePrefix & "MEMBERS.M_NAME " 
+
+Should start around line 700
+before the line which says..
+
+strSql = strSql & " FROM " & strMemberTablePrefix & "MEMBERS "
+
+insert the following line..
+strsql = strsql & ", " & strMemberTablePrefix & "MEMBERS.M_ALLOWDOWNLOADS, " & strMemberTablePrefix & "MEMBERS.M_ALLOWUPLOADS "
+
+
+
+
+around line 1110, you should find
+
+if strLNews = "1" then
+	strsql = strsql & ",	M_LNEWS = '" & ChkString(Request.Form("LNews"),"message") & "'" 
+end if
+if strQuote = "1" then
+	strSql = strSql & ",	M_QUOTE = '" & ChkString(Request.Form("Quote"),"message") & "'" 
+end if
+
+Insert the code in ############ below imediately after the above code, and before this
+
+	strSql = strSql & " WHERE MEMBER_ID = " & Request.Form("MEMBER_ID")	
+	my_Conn.Execute(strSql)
+
+
+'#################################################################
+if Request.Form("allowDownloads") = 1 then
+	strSql = strSql & ",	M_ALLOWDOWNLOADS = 1"
+else 					
+	strSql = strSql & ",	M_ALLOWDOWNLOADS = 0"
+end if
+if Request.Form("allowUploads") = 1 then
+	strSql = strSql & ",	M_ALLOWUPLOADS = 1"
+else 					
+	strSql = strSql & ",	M_ALLOWUPLOADS = 0"
+end if
+'##################################################################	
+
+
+pop_delete.asp
+--------------------------------------------
+
+at the top of pop_delet.asp, just after the
+
+if strAuthType = "db" then
+	STRdbntUserName = Request.Form("User")
+end if
+
+
+Insert the following function...
+
+'################### File Attachments ############################ 
+function DeleteUploads(msgType,ID)
+	select case msgType
+		case "Topic"
+			strSql = "SELECT USERFILES.MEMBER_ID,USERFILES.F_FILENAME FROM " & strTablePrefix & "USERFILES "
+			strSql = strSql & " WHERE " & strTablePrefix & "USERFILES.F_TOPIC_ID = " & ID
+			set rs2 = my_Conn.Execute (strSql)
+			on error resume next
+			if not(rs2.eof or rs2.bof) then
+				Set ScriptObject = Server.CreateObject("Scripting.FileSystemObject")
+				do while not rs2.eof
+					FilePath = Server.mappath("/Uploaded") & "\" & getMemberName(rs2("MEMBER_ID")) & "\"
+					'ScriptObject.DeleteFile(FilePath & rs2("F_FILENAME"))
+					rs2.MoveNext
+				loop
+				DeleteUploads = 1
+			else 
+				DeleteUploads = 0
+			end if
+			rs2.Close
+		case "Reply"
+			strSql = "SELECT MEMBER_ID,F_FILENAME FROM " & strTablePrefix & "USERFILES "
+			strSql = strSql & " WHERE F_REPLY_ID = " & ID
+			set rs2 = my_Conn.Execute (strSql)
+			if not(rs2.eof or rs2.bof) then
+				Set ScriptObject = Server.CreateObject("Scripting.FileSystemObject")
+				on error resume next
+				do while not rs2.eof
+					FilePath = Server.mappath("/Uploaded") & "\" & getMemberName(rs2("MEMBER_ID")) & "\"
+					ScriptObject.DeleteFile(FilePath & rs2("F_FILENAME"))
+					rs2.MoveNext
+				loop
+				DeleteUploads = 1
+			else
+				DeleteUploads = 0
+			end if
+			rs2.Close
+	end Select
+end function
+'################### File Attachment end ############################
+
+
+The next piece of code, imediately after the function you have just inserted, should read				
+
+
+if Request.QueryString("mode") = "DeleteReply" then 
+	mLev = cint(ChkUser3(strDBNTUserName, Request.Form("Pass"), Request.Form("REPLY_ID"))) 
+	if mLev > 0 then  '## is Member
+	  if (chkForumModerator(Request.Form("FORUM_ID"), strDBNTUserName) = "1") or (mLev = 1) or (mLev = 4) then '## is Allowed
+		'## Forum_SQL - Delete reply
+		strSql = "DELETE FROM " & strTablePrefix & "REPLY "
+		strSql = strSql & " WHERE " & strTablePrefix & "REPLY.REPLY_ID = " & Request.Form("REPLY_ID")
+		my_Conn.Execute strSql
+
+Imediately after this insert the following
+
+'################### File Attachments ############################
+	if DeleteUploads("Reply",Request.Form("REPLY_ID")) = 1 then
+		strSql = "DELETE FROM " & strTablePrefix & "USERFILES "
+		strSql = strSql & " WHERE " & strTablePrefix & "USERFILES.F_REPLY_ID = " & Request.Form("REPLY_ID")
+		my_Conn.Execute strSql
+	end if
+'################### File Attachments end ########################
+
+
+Post.asp
+------------------------------------------------
+
+after the <!--#INCLUDE FILE="inc_top.asp"--> insert the following
+
+'############ File Attachments #####################
+Dim AllowDownloads
+strSql = "SELECT M_VALUE FROM " & strTablePrefix & "MODS "
+strSql = strSql & "WHERE M_NAME = 'Attachment' AND M_CODE = 'faAllowUploads'"
+set rsAttachment = my_Conn.Execute (strSql)
+AllowDownloads = cInt(rsAttachment("M_VALUE"))
+'############ File Attachments #####################
+
+Insert the next bit of code whereever you want the button to appear
+
+<% 
+'#################################################################################
+'## File Attachment Stuff
+'#################################################################################
+	if strRqMethod = "Reply" or _
+	strRqMethod = "Edit" or _ 
+	strRqMethod = "ReplyQuote" or _
+	strRqMethod = "TopicQuote" then 
+		if AllowDownloads = 1 then 
+			response.write "&nbsp;<b>Attach File:</b>&nbsp;"
+			Response.Write "<a href =" & """" & "javascript:openWindow('/Mods/pop_upload.asp?TOPIC_ID=" & Request.Querystring("TOPIC_ID") & "&REPLY_ID=" & Request.Querystring("REPLY_ID") & "&MEMBER_ID=" & getMemberID(STRdbntUserName) & "')"" >"
+			Response.Write "<img src=""icon_paperclip.gif"" width=23 height=22 border=0 ></a>&nbsp;"
+		end if
+	end if
+'#################################################################################
+'## File Attachment Stuff
+'#################################################################################
+%>
+
+I have put it around line 740, after this..
+
+      <select name="font" onChange="thelp(this.options[this.selectedIndex].value)">
+	<option value="1">Help&nbsp;</option>
+	<option value="2">Prompt&nbsp;</option>
+	<option selected value="0">Basic&nbsp;</option>
+	</select>          
+
+
+That's all the modifications, copy all the other files to the forum/mods directory.
+
+Log ins as admin, you should see an entry in the Mods table. Execute the setup prog from here
+to setup the DB to allow File attachments.
+
+You will need to create a directory under your forum directory called "uploaded"
+files will be stored in a subdirectory with the users name under the "uploaded" root.
+
+
+Any questions please email me at
+
+huw.reddick@ntlworld.com

@@ -1,0 +1,119 @@
+New Member PM Letter Mod
+
+This Mod requires animedj's Mod Commander
+Private Message Mod
+
+
+Changes to Forum Code files
+
+
+You can view the file register,asp if you have made modifications. Needed files are admin_new_mem_pm.asp, 
+this can go in the /forum/ directory, and newmempm.mod and .txt will go in the /forum/mods directory. Please
+do not unzip my register.asp file in your directory it contants other mods that may cause errors on your site.
+
+----------------------------------------------------------------------------------------------------------------
+If you have already changed the register.asp with the manual configuration code. You will need to make the
+following changes:
+
+
+'########################### PM NEW MEMBER #####################
+	Dim objDict
+	Set objDict = Server.CreateObject("Scripting.Dictionary")
+	set objRec = my_Conn.execute("SELECT * FROM " & strTablePrefix & "MODS WHERE M_NAME = 'NewMemPM'")
+
+	while not objRec.EOF 
+	  objDict.Add objRec.Fields.Item("m_code").Value, objRec.Fields.Item("m_value").Value
+	  objRec.moveNext
+	wend 
+
+	if Request.Form("Method_Type") = "Write_Configuration" then 
+		Err_Msg = ""
+	
+		if Err_Msg = "" then
+
+	  objDict.Item("Admin") = Request.Form("strAdmin")
+	  objDict.Item("Subject") = Request.Form("strSubject")
+	  objDict.Item("Message") = Request.Form("strMessage")
+	  objDict.Item("OnOff") = Request.Form("strOnOff")
+			a = objDict.Keys
+			b = objDict.Items
+   			For i = 0 To objDict.Count -1 ' Iterate the array.
+			strSql = "UPDATE " & strTablePrefix & "MODS "
+			strSql = strSql & " SET M_VALUE ='" & b(i) & "'"
+			strSQL = strSql & " WHERE M_NAME = 'Attachment' AND M_CODE = '" & a(i) & "' "
+			'response.write strSQL
+			my_Conn.Execute (strSql)
+   			Next
+
+			Application(strCookieURL & "ConfigLoaded") = ""
+%>
+
+<% end if %>
+<%			strSql = "SELECT * FROM " & strTablePrefix & "CONFIG_NEWMEMPM " %>
+<% end if %>
+
+<% Admin = GetMemberID(objDict.Item("Admin")) %>
+<% Subject = objDict.Item("Subject") %>
+<% Message = objDict.Item("Message") %>
+<% OnOff = objDict.Item("OnOff")
+
+if OnOff = "1" then
+strSql = "INSERT INTO " & strTablePrefix & "PM "
+strSql = strSql & "(M_SUBJECT"
+strSql = strSql & ", M_FROM"
+strSql = strSql & ", M_TO"
+strSql = strSql & ", M_SENT"
+strSql = strSql & ", M_MESSAGE"
+strSql = strSql & ", M_READ"
+strSql = strSql & ", M_MAIL"
+strSql = strSql & ", M_OUTBOX"
+strSql = strSql & ") "
+strSql = strSql & " VALUES ("
+strSql = strSql & "'" & Subject & "'"
+strSql = strSql & ", " & "'" & Admin & "'"
+strSql = strSql & ", " & "'" & GetMemberID( Request.Form("Name")) & "'"
+strSql = strSql & ", " & "'" & DateToStr(strForumTimeAdjust) & "'"
+strSql = strSql & ", " & "'" & Message & "'"
+strSql = strSql & ", " & "'0'"
+strSql = strSql & ", " & "'0'"
+strSql = strSql & ", " & 1 & ")"
+
+my_Conn.Execute (strSql)
+end if
+'########################### PM NEW MEMBER #####################
+
+----------------------------------------------------------------------------------------------------------------
+
+That's all the modifications,
+
+Log in as admin, you should see an entry in the Mods table. Execute the setup prog from here.
+
+Any questions please email me at
+kycable@webzonecomplete.com
+webmaster@webzonecomplete.com
+kycable99@webzonecomplete.com
+kycable99@msn.com
+
+or stop by my site at:
+http://www.webzonecomplete.com
+
+here you will also be able to see an example
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
