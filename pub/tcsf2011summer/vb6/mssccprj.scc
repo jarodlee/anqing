@@ -1,0 +1,94 @@
+SCC = This is a Source Code Control file
+
+[l1.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/桐城学习/l1", DAAAAAAA
+
+[print用法.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/桐城学习/print用法", GAAAAAAA
+
+[工程1.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/桐城学习/按钮的使用", JAAAAAAA
+
+[计算窗体大小.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第1天上午/计算窗体大小", SAAAAAAA
+[工程2.vbp]
+SCC_Project_Name=this project is not under source code control
+SCC_Aux_Path=<This is an empty string for the mssccprj.scc file>
+
+[窗体控制.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第1天上午/窗体控制", VAAAAAAA
+[图书资料查询.vbp]
+SCC_Project_Name=this project is not under source code control
+SCC_Aux_Path=<This is an empty string for the mssccprj.scc file>
+[简单计算功能.vbp]
+SCC_Project_Name ="$/第1天下午/简单计算功能", YAAAAAAA
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+
+[计算三角形面积.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第1天下午/计算三角形面积", BBAAAAAA
+
+[温度转换.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第1天下午/温度转换", FBAAAAAA
+
+[P119数据库操作实例.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/练习/P119数据库操作实例", JBAAAAAA
+
+[菜单设计.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/练习/菜单设计", QBAAAAAA
+
+[文件浏览.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/练习/文件浏览", VBAAAAAA
+
+[密码验证.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天上午/密码验证", ZBAAAAAA
+
+[if嵌套.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天上午/if嵌套", CCAAAAAA
+
+[任意四则计算器.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天上午/任意四则计算器", FCAAAAAA
+
+[阶乘计算.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天上午/阶乘计算", JCAAAAAA
+
+[1000以内8与9公倍数的和.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天上午/1000以内8与9公倍数的和", MCAAAAAA
+
+[百钱百鸡问题.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天下午/百钱百鸡问题", PCAAAAAA
+
+[水仙花数.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天下午/水仙花数", SCAAAAAA
+
+[九九乘法表.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天下午/九九乘法表", WCAAAAAA
+
+[菱形图.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天下午/菱形图", ZCAAAAAA
+
+[人口计算.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天下午/人口计算", CDAAAAAA
+
+[控件使用.vbp]
+SCC_Aux_Path =C:\Program Files\Microsoft Visual Studio\Common\VSS,
+SCC_Project_Name ="$/第2天下午/控件使用", FDAAAAAA
