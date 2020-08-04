@@ -1,0 +1,778 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> CentOS Pub 论坛 --- 中文 CentOS 攻略站  - Powered by Discuz!</title>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www./");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12647196-1");
+pageTracker._setDomainName("http://www.centospub.com/bbs/.centospub.com");
+pageTracker._trackPageview();
+} catch(err) {}</script><meta name="keywords" content="" />
+<meta name="description" content=" CentOS Pub 论坛 --- 中文 CentOS 攻略站  - Discuz! Board" />
+<meta name="generator" content="Discuz! 7.2" />
+<meta name="author" content="Discuz! Team and Comsenz UI Team" />
+<meta name="copyright" content="2001-2009 Comsenz Inc." />
+<meta name="MSSmartTagsPreventParsing" content="True" />
+<meta http-equiv="MSThemeCompatible" content="Yes" />
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<link rel="archives" title="CentOS Pub 论坛 --- 中文 CentOS 攻略站" href="http://www.centospub.com/bbs/archiver/" />
+<link rel="alternate" type="application/rss+xml" title="CentOS Pub 论坛 --- 中文 CentOS 攻略站" href="http://www.centospub.com/bbs/rss.php?auth=0" />
+<link rel="stylesheet" type="text/css" href="style_1_common.css-lT4.css" tppabs="http://www.centospub.com/bbs/forumdata/cache/style_1_common.css?lT4" /><link rel="stylesheet" type="text/css" href="scriptstyle_1_index.css-lT4.css" tppabs="http://www.centospub.com/bbs/forumdata/cache/scriptstyle_1_index.css?lT4" />
+<script type="text/javascript">var STYLEID = '1', IMGDIR = 'images/default', VERHASH = 'lT4', charset = 'utf-8', discuz_uid = 0, cookiedomain = '', cookiepath = '/', attackevasive = '0', disallowfloat = 'login|register|sendpm|newthread|reply', creditnotice = '', gid = parseInt('0'), fid = parseInt('0'), tid = parseInt('0')</script>
+<script src="common.js-lT4" tppabs="http://www.centospub.com/bbs/forumdata/cache/common.js?lT4" type="text/javascript"></script>
+</head>
+
+<body id="index" onkeydown="if(event.keyCode==27) return false;">
+
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+
+<div id="header">
+<div class="wrap s_clear">
+<h2><a href="index.php.htm" tppabs="http://www.centospub.com/bbs/index.php" title="CentOS Pub 论坛 --- 中文 CentOS 攻略站"><img src="logo-1.gif" tppabs="http://www.centospub.com/bbs/images/default/logo.gif" alt="CentOS Pub 论坛 --- 中文 CentOS 攻略站" border="0" /></a></h2>
+<div id="umenu">
+<a href="register.php.htm" tppabs="http://www.centospub.com/bbs/register.php" onclick="showWindow('register', this.href);return false;" class="noborder">注册</a>
+<a href="logging.php-action=login.htm" tppabs="http://www.centospub.com/bbs/logging.php?action=login" onclick="showWindow('login', this.href);return false;">登录</a>
+</div>
+<div id="ad_headerbanner"><script type="text/javascript"><!--
+google_ad_client = "pub-1031848957126984";
+/* 468x60, 作成済み 08/06/27 */
+google_ad_slot = "0965285462";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="show_ads.js" tppabs="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div id="menu">
+<ul>
+<li class="menu_1"><a href="index.php.htm" tppabs="http://www.centospub.com/bbs/index.php" hidefocus="true" id="mn_index">论坛</a></li><li class="menu_2"><a href="search.php.htm" tppabs="http://www.centospub.com/bbs/search.php" hidefocus="true" id="mn_search">搜索</a></li><li class="menu_4"><a href="faq.php.htm" tppabs="http://www.centospub.com/bbs/faq.php" hidefocus="true" id="mn_faq">帮助</a></li><li class="menu_5"><a href="misc.php-action=nav.htm" tppabs="http://www.centospub.com/bbs/misc.php?action=nav" hidefocus="true" onclick="showWindow('nav', this.href);return false;">导航</a></li></ul>
+<script type="text/javascript">
+var currentMenu = $('mn_index') ? $('mn_index') : $('mn_index');
+currentMenu.parentNode.className = 'current';
+</script>
+</div>
+</div>
+<div id="myprompt_menu" style="display:none" class="promptmenu">
+<div class="promptcontent">
+<ul class="s_clear"><li style="display:none"><a id="prompt_pm" href="pm.php-filter=newpm.htm" tppabs="http://www.centospub.com/bbs/pm.php?filter=newpm" target="_blank">私人消息 (0)</a></li><li style="display:none"><a id="prompt_announcepm" href="pm.php-filter=announcepm.htm" tppabs="http://www.centospub.com/bbs/pm.php?filter=announcepm" target="_blank">公共消息 (0)</a></li><li style="display:none"><a id="prompt_task" href="task.php-item=doing.htm" tppabs="http://www.centospub.com/bbs/task.php?item=doing" target="_blank">论坛任务 (0)</a></li><li style="display:none"><a id="prompt_systempm" href="javascript:if(confirm('http://www.centospub.com/bbs/notice.php?filter=systempm  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/notice.php?filter=systempm'" tppabs="http://www.centospub.com/bbs/notice.php?filter=systempm" target="_blank">系统消息 (0)</a></li><li style="display:none"><a id="prompt_friend" href="javascript:if(confirm('http://www.centospub.com/bbs/notice.php?filter=friend  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/notice.php?filter=friend'" tppabs="http://www.centospub.com/bbs/notice.php?filter=friend" target="_blank">好友消息 (0)</a></li><li style="display:none"><a id="prompt_threads" href="javascript:if(confirm('http://www.centospub.com/bbs/notice.php?filter=threads  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/notice.php?filter=threads'" tppabs="http://www.centospub.com/bbs/notice.php?filter=threads" target="_blank">帖子消息 (0)</a></li></ul>
+</div>
+</div>
+</div>
+<div id="nav"><a href="index.php.htm" tppabs="http://www.centospub.com/bbs/index.php">CentOS Pub 论坛 --- 中文 CentOS 攻略站</a> &raquo; 首页</div>
+<div id="ad_text"></div><div id="wrap" class="wrap s_clear">
+<div class="main"><div class="content">
+<div class="pages_btns s_clear">
+<span class="postbtn" id="prompt_index_postbtn"><a href="misc.php-action=nav.htm" tppabs="http://www.centospub.com/bbs/misc.php?action=nav" onclick="showWindow('nav', this.href);return false;">发帖</a></span>
+<p>你可以<a href="register.php.htm" tppabs="http://www.centospub.com/bbs/register.php" onclick="showWindow('register', this.href);return false;" class="lightlink">注册</a>一个帐号，并以此<a href="logging.php-action=login.htm" tppabs="http://www.centospub.com/bbs/logging.php?action=login" onclick="showWindow('login', this.href);return false;" class="lightlink">登录</a>，以浏览更多精彩内容，并随时发布观点，与大家交流。</p>
+</div>
+
+<div id="ann">
+<dl>
+<dt>公告:</dt>
+<dd>
+<div id="annbody"><ul id="annbodylis"><li><a href="javascript:if(confirm('http://www.centospub.com/bbs/announcement.php?id=12  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/announcement.php?id=12'" tppabs="http://www.centospub.com/bbs/announcement.php?id=12">论坛注册方式启用邮件验证<em>(2009-9-8)</em></a></li><li><a href="javascript:if(confirm('http://www.centospub.com/bbs/announcement.php?id=13  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/announcement.php?id=13'" tppabs="http://www.centospub.com/bbs/announcement.php?id=13">关于无法收到邮件验证的问题<em>(2009-9-7)</em></a></li></ul></div>
+</dd>
+</dl>
+</div>
+<script type="text/javascript">announcement();</script>
+
+
+<div class="itemtitle s_clear">
+<p class="right forumcount">
+今日: <em>1</em>, 昨日: <em>1</em>, 会员: <em>142348</em>
+</p>
+<ul>
+<li class="current"><a href="javascript:if(confirm('http://www.centospub.com/bbs/index.php?op=classics  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/index.php?op=classics'" tppabs="http://www.centospub.com/bbs/index.php?op=classics"><span>论坛版块</span></a></li>
+<li><a href="javascript:if(confirm('http://www.centospub.com/bbs/index.php?op=feeds  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/index.php?op=feeds'" tppabs="http://www.centospub.com/bbs/index.php?op=feeds"><span>论坛动态</span></a></li>
+</ul></div><div class="mainbox list">
+<span class="headactions">
+<img id="category_3_img" src="collapsed_no.gif" tppabs="http://www.centospub.com/bbs/images/default/collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_3');" />
+</span>
+<h3><a href="javascript:if(confirm('http://www.centospub.com/bbs/index.php?gid=3  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/index.php?gid=3'" tppabs="http://www.centospub.com/bbs/index.php?gid=3" style="">技术区</a></h3>
+<table id="category_3" summary="category3" cellspacing="0" cellpadding="0" style="">
+<tbody id="forum1">
+<tr>
+<th class="new">
+<div class="left">
+<h2><a href="javascript:if(confirm('http://www.centospub.com/bbs/forumdisplay.php?fid=1  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/forumdisplay.php?fid=1'" tppabs="http://www.centospub.com/bbs/forumdisplay.php?fid=1"  style="">★ 问题解答 ★</a><em> (今日: <strong>1</strong>)</em></h2>
+<p>　　用 CentOS 构建网络服务器的讨论。在通过本站的教程构建服务器中遇到的问题以及解决办法，请到这里来提问。</p><p>版主: <a class="notabs" href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=Chao  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=Chao'" tppabs="http://www.centospub.com/bbs/space.php?username=Chao">Chao</a></p></div>
+</th>
+<td class="forumnums">
+<em>2131</em> / 7284</td>
+<td class="forumlast">
+<p><a href="javascript:if(confirm('http://www.centospub.com/bbs/redirect.php?tid=7532&goto=lastpost  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/redirect.php?tid=7532&goto=lastpost#lastpost'" tppabs="http://www.centospub.com/bbs/redirect.php?tid=7532&goto=lastpost#lastpost">双网卡连不同的网络如何设路由使 ...</a></p>
+<cite><a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=Reaper  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=Reaper'" tppabs="http://www.centospub.com/bbs/space.php?username=Reaper">Reaper</a> - 2012-8-20 08:53</cite>
+</td>
+</tr>
+</tbody><tbody id="forum6">
+<tr>
+<th>
+<div class="left">
+<h2><a href="javascript:if(confirm('http://www.centospub.com/bbs/forumdisplay.php?fid=6  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/forumdisplay.php?fid=6'" tppabs="http://www.centospub.com/bbs/forumdisplay.php?fid=6"  style="">★ 应用技巧 ★</a></h2>
+<p>　　暂未有本站教程发表支持的， CentOS 以及 Red Hat 系 Linux （RHEL、Fedora）相关应用技巧的讨论。</p><p>版主: <a class="notabs" href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=xaay  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=xaay'" tppabs="http://www.centospub.com/bbs/space.php?username=xaay">xaay</a></p></div>
+</th>
+<td class="forumnums">
+<em>263</em> / 2628</td>
+<td class="forumlast">
+<p><a href="javascript:if(confirm('http://www.centospub.com/bbs/redirect.php?tid=7171&goto=lastpost  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/redirect.php?tid=7171&goto=lastpost#lastpost'" tppabs="http://www.centospub.com/bbs/redirect.php?tid=7171&goto=lastpost#lastpost">windows下用centos 6 for colinu ...</a></p>
+<cite><a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=hs0830  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=hs0830'" tppabs="http://www.centospub.com/bbs/space.php?username=hs0830">hs0830</a> - 2012-8-18 10:21</cite>
+</td>
+</tr>
+</tbody><tbody id="forum10">
+<tr>
+<th class="new">
+<div class="left">
+<h2><a href="javascript:if(confirm('http://www.centospub.com/bbs/forumdisplay.php?fid=10  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/forumdisplay.php?fid=10'" tppabs="http://www.centospub.com/bbs/forumdisplay.php?fid=10"  style="">★ CentOS 基础教学 ★</a></h2>
+<p>　　基于 CentOS的从 Linux 最基础开始的入门知识，资料共享板块。<br />
+&nbsp; &nbsp;※本版块并非问题解答板块</p><p>版主: <a class="notabs" href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=tgyouki  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=tgyouki'" tppabs="http://www.centospub.com/bbs/space.php?username=tgyouki">tgyouki</a></p></div>
+</th>
+<td class="forumnums">
+<em>328</em> / 3010</td>
+<td class="forumlast">
+<p><a href="javascript:if(confirm('http://www.centospub.com/bbs/redirect.php?tid=7531&goto=lastpost  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/redirect.php?tid=7531&goto=lastpost#lastpost'" tppabs="http://www.centospub.com/bbs/redirect.php?tid=7531&goto=lastpost#lastpost">centos 中ping 不通外网，但却能 ...</a></p>
+<cite><a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=ndpa001  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=ndpa001'" tppabs="http://www.centospub.com/bbs/space.php?username=ndpa001">ndpa001</a> - 2012-8-19 19:19</cite>
+</td>
+</tr>
+</tbody><tbody id="forum7">
+<tr>
+<th>
+<div class="left">
+<h2><a href="javascript:if(confirm('http://www.centospub.com/bbs/forumdisplay.php?fid=7  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/forumdisplay.php?fid=7'" tppabs="http://www.centospub.com/bbs/forumdisplay.php?fid=7"  style="">★ CentOS 攻略全实录 ★</a></h2>
+<p>　　细致的步骤，经过测试、并且实践成功的配置过程详解。（本版文档为本站成员原创）</p></div>
+</th>
+<td class="forumnums">
+<em>18</em> / 5954</td>
+<td class="forumlast">
+<p><a href="javascript:if(confirm('http://www.centospub.com/bbs/redirect.php?tid=273&goto=lastpost  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/redirect.php?tid=273&goto=lastpost#lastpost'" tppabs="http://www.centospub.com/bbs/redirect.php?tid=273&goto=lastpost#lastpost">打造安全的CENTOS服务器</a></p>
+<cite><a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=www.tkb518.com  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=www.tkb518.com'" tppabs="http://www.centospub.com/bbs/space.php?username=www.tkb518.com">www.tkb518.com</a> - 2012-8-17 23:51</cite>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div id="ad_intercat_3"></div><div class="mainbox list">
+<span class="headactions">
+<img id="category_2_img" src="collapsed_no.gif" tppabs="http://www.centospub.com/bbs/images/default/collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_2');" />
+</span>
+<h3><a href="javascript:if(confirm('http://www.centospub.com/bbs/index.php?gid=2  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/index.php?gid=2'" tppabs="http://www.centospub.com/bbs/index.php?gid=2" style="">休闲区</a></h3>
+<table id="category_2" summary="category2" cellspacing="0" cellpadding="0" style="">
+<tbody id="forum5">
+<tr>
+<th>
+<div class="left">
+<h2><a href="javascript:if(confirm('http://www.centospub.com/bbs/forumdisplay.php?fid=5  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/forumdisplay.php?fid=5'" tppabs="http://www.centospub.com/bbs/forumdisplay.php?fid=5"  style="">★ 闲 聊 区 ★</a></h2>
+<p>　　灌水、交友、贴图、文化、体育、娱乐、时尚…想说什么就说什么！</p><p>版主: <a class="notabs" href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=xaay  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=xaay'" tppabs="http://www.centospub.com/bbs/space.php?username=xaay">xaay</a></p></div>
+</th>
+<td class="forumnums">
+<em>1098</em> / 2191</td>
+<td class="forumlast">
+<p><a href="javascript:if(confirm('http://www.centospub.com/bbs/redirect.php?tid=2905&goto=lastpost  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/redirect.php?tid=2905&goto=lastpost#lastpost'" tppabs="http://www.centospub.com/bbs/redirect.php?tid=2905&goto=lastpost#lastpost">21两种盖房子的人</a></p>
+<cite><a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=hs0830  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=hs0830'" tppabs="http://www.centospub.com/bbs/space.php?username=hs0830">hs0830</a> - 2012-8-16 10:40</cite>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div id="ad_intercat_2"></div><div class="mainbox list">
+<span class="headactions">
+<img id="category_8_img" src="collapsed_no.gif" tppabs="http://www.centospub.com/bbs/images/default/collapsed_no.gif" title="收起/展开" alt="收起/展开" onclick="toggle_collapse('category_8');" />
+</span>
+<h3><a href="javascript:if(confirm('http://www.centospub.com/bbs/index.php?gid=8  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/index.php?gid=8'" tppabs="http://www.centospub.com/bbs/index.php?gid=8" style="">站务区</a></h3>
+<table id="category_8" summary="category8" cellspacing="0" cellpadding="0" style="">
+<tbody id="forum4">
+<tr>
+<th>
+<div class="left">
+<h2><a href="javascript:if(confirm('http://www.centospub.com/bbs/forumdisplay.php?fid=4  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/forumdisplay.php?fid=4'" tppabs="http://www.centospub.com/bbs/forumdisplay.php?fid=4"  style="">★ 站务 & 建议 ★</a></h2>
+<p>　　对本站的任何意见、建议，以及友情链接的交换等等信息请到这里发布。</p><p>版主: <a class="notabs" href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=%E7%9B%B4%E5%8D%87%E6%9C%BA%E5%A4%A7%E7%88%B7  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=%E7%9B%B4%E5%8D%87%E6%9C%BA%E5%A4%A7%E7%88%B7'" tppabs="http://www.centospub.com/bbs/space.php?username=%E7%9B%B4%E5%8D%87%E6%9C%BA%E5%A4%A7%E7%88%B7">直升机大爷</a></p></div>
+</th>
+<td class="forumnums">
+<em>95</em> / 585</td>
+<td class="forumlast">
+<p><a href="javascript:if(confirm('http://www.centospub.com/bbs/redirect.php?tid=1751&goto=lastpost  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/redirect.php?tid=1751&goto=lastpost#lastpost'" tppabs="http://www.centospub.com/bbs/redirect.php?tid=1751&goto=lastpost#lastpost">能有个群就好了</a></p>
+<cite><a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?username=www.tkb518.com  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?username=www.tkb518.com'" tppabs="http://www.centospub.com/bbs/space.php?username=www.tkb518.com">www.tkb518.com</a> - 2012-8-17 23:53</cite>
+</td>
+</tr>
+</tbody></table>
+</div>
+<div id="ad_intercat_8"></div>
+<div class="mainbox list">
+<span class="headactions"><img id="forumlinks_img" src="collapsed_no.gif" tppabs="http://www.centospub.com/bbs/images/default/collapsed_no.gif" alt="" onclick="toggle_collapse('forumlinks');" /></span>
+<h3>友情链接</h3>
+<div id="forumlinks" style="">
+<div class="forumimglink">
+<a href="index.htm" tppabs="http://www.centospub.com/" target="_blank"><img src="logo-2.gif" tppabs="http://www.centospub.com/logo.gif" border="0" alt="CentOS Pub" /></a> <a href="javascript:if(confirm('http://bbs.nettf.net/forums/index.php  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://bbs.nettf.net/forums/index.php'" tppabs="http://bbs.nettf.net/forums/index.php" target="_blank"><img src="nettf_logo.gif" tppabs="http://www.centospub.com/images/others/nettf_logo.gif" border="0" alt="网络技术论坛" /></a> <a href="javascript:if(confirm('http://www.ispcpcn.com/bbs  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.ispcpcn.com/bbs'" tppabs="http://www.ispcpcn.com/bbs" target="_blank"><img src="ispcpcn.gif" tppabs="http://www.centospub.com/images/others/ispcpcn.gif" border="0" alt="开源虚拟主机社区" /></a> </div>
+</div>
+</div>
+<div class="mainbox list" id="online">
+<span class="headactions"><a href="javascript:if(confirm('http://www.centospub.com/bbs/index.php?showoldetails=no  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/index.php?showoldetails=no#online'" tppabs="http://www.centospub.com/bbs/index.php?showoldetails=no#online" title="关闭"><img src="collapsed_no.gif" tppabs="http://www.centospub.com/bbs/images/default/collapsed_no.gif" alt="关闭" /></a></span>
+<h3>
+<strong><a href="javascript:if(confirm('http://www.centospub.com/bbs/member.php?action=online  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/member.php?action=online'" tppabs="http://www.centospub.com/bbs/member.php?action=online">在线会员</a></strong>
+- <em>443</em> 人在线
+- <em>110</em> 会员(<em>0</em> 隐身),
+<em>333</em> 位游客
+- 最高记录是 <em>804</em> 于 <em>2007-11-15</em>.
+</h3>
+<dl id="onlinelist">
+<dt><img src="online_admin.gif" tppabs="http://www.centospub.com/bbs/images/common/online_admin.gif" /> 管理员 &nbsp; &nbsp; &nbsp; <img src="online_supermod.gif" tppabs="http://www.centospub.com/bbs/images/common/online_supermod.gif" /> 超级版主 &nbsp; &nbsp; &nbsp; <img src="online_moderator.gif" tppabs="http://www.centospub.com/bbs/images/common/online_moderator.gif" /> 版主 &nbsp; &nbsp; &nbsp; <img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" /> 会员 &nbsp; &nbsp; &nbsp; </dt>
+<dd>
+<ul class="s_clear">
+<li title="时间: 11:28
+操作: 浏览论坛首页 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?uid=145702  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?uid=145702'" tppabs="http://www.centospub.com/bbs/space.php?uid=145702">邵虎烟</a>
+</li><li title="时间: 11:24
+操作: 注册为新会员 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?uid=145701  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?uid=145701'" tppabs="http://www.centospub.com/bbs/space.php?uid=145701">kszic</a>
+</li><li title="时间: 11:22
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?uid=145700  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?uid=145700'" tppabs="http://www.centospub.com/bbs/space.php?uid=145700">whhpwivb</a>
+</li><li title="时间: 11:20
+操作: 查看使用帮助 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?uid=145699  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?uid=145699'" tppabs="http://www.centospub.com/bbs/space.php?uid=145699">aomx8060</a>
+</li><li title="时间: 11:18
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?uid=145698  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?uid=145698'" tppabs="http://www.centospub.com/bbs/space.php?uid=145698">heezqikt</a>
+</li><li title="时间: 11:16
+操作: 浏览论坛首页 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?uid=145697  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?uid=145697'" tppabs="http://www.centospub.com/bbs/space.php?uid=145697">pcol2008</a>
+</li><li title="时间: 11:12
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="javascript:if(confirm('http://www.centospub.com/bbs/space.php?uid=145696  \n\nThis file was not retrieved by Teleport Pro, because it was unavailable, or its retrieval was aborted, or the project was stopped too soon.  \n\nDo you want to open it from the server?'))window.location='http://www.centospub.com/bbs/space.php?uid=145696'" tppabs="http://www.centospub.com/bbs/space.php?uid=145696">hp5631298</a>
+</li><li title="时间: 11:09
+操作: 浏览论坛首页 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145695.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145695">roxavoisa</a>
+</li><li title="时间: 10:56
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145694.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145694">hgN789560k</a>
+</li><li title="时间: 10:53
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145693.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145693">lG6sZBGI</a>
+</li><li title="时间: 10:53
+操作: 注册为新会员 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145692.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145692">孔明123</a>
+</li><li title="时间: 10:52
+操作: 注册为新会员 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145691.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145691">勇斌新焘</a>
+</li><li title="时间: 10:50
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145690.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145690">Sk87MpCH</a>
+</li><li title="时间: 10:48
+操作: 注册为新会员 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145689.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145689">yhkkz</a>
+</li><li title="时间: 10:42
+操作: 注册为新会员 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145688.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145688">蓝天爱神llj</a>
+</li><li title="时间: 10:40
+操作: 注册为新会员 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145687.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145687">爱我别走d</a>
+</li><li title="时间: 10:38
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145686.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145686">ipr677c3</a>
+</li><li title="时间: 10:37
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145685.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145685">gwagge08</a>
+</li><li title="时间: 10:42
+操作: 无效的越权访问 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145684.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145684">冯尖</a>
+</li><li title="时间: 10:32
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145683.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145683">qwtdcvd8829</a>
+</li><li title="时间: 11:08
+操作: 浏览帖子 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145679.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145679">rhqkf</a>
+</li><li title="时间: 11:14
+操作: 无效的越权访问 
+版块: ★ 闲 聊 区 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145669.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145669">lksdjy1rq062</a>
+</li><li title="时间: 10:56
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145665.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145665">ttrsgssr5627</a>
+</li><li title="时间: 10:33
+操作: 无效的越权访问 
+版块: ★ 闲 聊 区 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145663.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145663">ght123472</a>
+</li><li title="时间: 11:09
+操作: 无效的越权访问 
+版块: ★ CentOS 攻略全实录 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145610.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145610">tyygsf8887</a>
+</li><li title="时间: 10:56
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145581.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145581">船英成蔡</a>
+</li><li title="时间: 11:25
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145560.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145560">sjja3tksahh</a>
+</li><li title="时间: 11:25
+操作: 无效的越权访问 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145554.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145554">kkzrze</a>
+</li><li title="时间: 10:32
+操作: 无效的越权访问 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145553.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145553">dkwwCivg</a>
+</li><li title="时间: 11:26
+操作: 浏览帖子 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145525.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145525">hbqqhbqq</a>
+</li><li title="时间: 11:02
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145512.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145512">0zanghaoz</a>
+</li><li title="时间: 10:42
+操作: 无效的越权访问 
+版块: ★ 闲 聊 区 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145500.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145500">iaO9iq</a>
+</li><li title="时间: 11:02
+操作: 无效的越权访问 
+版块: ★ CentOS 攻略全实录 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145418.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145418">wulihua7671</a>
+</li><li title="时间: 11:21
+操作: 浏览帖子 
+版块: ★ CentOS 攻略全实录 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145351.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145351">冷库nzc</a>
+</li><li title="时间: 11:15
+操作: 无效的越权访问 
+版块: ★ CentOS 攻略全实录 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145318.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145318">elfbkxd</a>
+</li><li title="时间: 11:01
+操作: 浏览帖子 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145229.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145229">tjatq</a>
+</li><li title="时间: 10:45
+操作: 无效的越权访问 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145211.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145211">Towi74oa82n</a>
+</li><li title="时间: 11:27
+操作: 浏览帖子 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145187.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145187">莫吉於</a>
+</li><li title="时间: 10:50
+操作: 无效的越权访问 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145166.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145166">lhcoy</a>
+</li><li title="时间: 11:24
+操作: 浏览帖子 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=145017.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=145017">xeqeh</a>
+</li><li title="时间: 10:28
+操作: 无效的越权访问 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144862.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144862">飚的职业装</a>
+</li><li title="时间: 11:08
+操作: 无效的越权访问 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144832.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144832">adsipu8u8</a>
+</li><li title="时间: 11:23
+操作: 无效的越权访问 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144831.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144831">arybs</a>
+</li><li title="时间: 11:15
+操作: 无效的越权访问 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144830.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144830">dbzj345</a>
+</li><li title="时间: 10:30
+操作: 无效的越权访问 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144778.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144778">qp0bxfh4uZrOQ</a>
+</li><li title="时间: 11:23
+操作: 浏览帖子 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144467.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144467">pgdph</a>
+</li><li title="时间: 11:27
+操作: 无效的越权访问 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144371.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144371">洲岛律大</a>
+</li><li title="时间: 11:03
+操作: 无效的越权访问 
+版块: ★ CentOS 攻略全实录 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144326.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144326">姚帖止</a>
+</li><li title="时间: 10:29
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144288.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144288">ancon5l9</a>
+</li><li title="时间: 10:44
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144171.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144171">77honxxc16q</a>
+</li><li title="时间: 10:31
+操作: 无效的越权访问 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144146.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144146">wqrgs</a>
+</li><li title="时间: 11:23
+操作: 无效的越权访问 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144141.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144141">fyekx</a>
+</li><li title="时间: 10:54
+操作: 无效的越权访问 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144098.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144098">kfycq</a>
+</li><li title="时间: 11:18
+操作: 无效的越权访问 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144067.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144067">iioau</a>
+</li><li title="时间: 11:24
+操作: 无效的越权访问 
+版块: ★ 闲 聊 区 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=144038.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=144038">566479sh17</a>
+</li><li title="时间: 11:23
+操作: 无效的越权访问 
+版块: ★ CentOS 攻略全实录 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=143911.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=143911">奥运完了</a>
+</li><li title="时间: 11:16
+操作: 无效的越权访问 
+版块: ★ 闲 聊 区 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=143899.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=143899">搬家了</a>
+</li><li title="时间: 10:29
+操作: 无效的越权访问 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=143868.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=143868">dftzo</a>
+</li><li title="时间: 11:26
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=143817.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=143817">idcion53</a>
+</li><li title="时间: 11:16
+操作: 浏览论坛版块 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=143754.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=143754">VilaPrearlery</a>
+</li><li title="时间: 10:40
+操作: 浏览帖子 
+版块: ★ CentOS 攻略全实录 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=143288.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=143288">梅光芳</a>
+</li><li title="时间: 10:57
+操作: 无效的越权访问 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=143180.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=143180">hg6856785l</a>
+</li><li title="时间: 10:29
+操作: 浏览论坛版块 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=143170.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=143170">龚弓岐</a>
+</li><li title="时间: 11:25
+操作: 浏览帖子 
+版块: ★ 闲 聊 区 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=142961.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=142961">nfxxr</a>
+</li><li title="时间: 11:19
+操作: 查看使用帮助 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=142891.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=142891">ghty9481</a>
+</li><li title="时间: 11:25
+操作: 浏览帖子 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=142435.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=142435">akenz</a>
+</li><li title="时间: 11:27
+操作: 无效的越权访问 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=142095.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=142095">mufl89</a>
+</li><li title="时间: 10:42
+操作: 无效的越权访问 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=141901.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=141901">付切式</a>
+</li><li title="时间: 11:23
+操作: 无效的越权访问 
+版块: ★ CentOS 攻略全实录 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=141388.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=141388">丁姜外</a>
+</li><li title="时间: 10:51
+操作: 无效的越权访问 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=141366.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=141366">埃树伟</a>
+</li><li title="时间: 10:47
+操作: 浏览帖子 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=140945.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=140945">快快</a>
+</li><li title="时间: 11:02
+操作: 浏览帖子 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=140747.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=140747">doadw</a>
+</li><li title="时间: 11:25
+操作: 浏览帖子 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=140454.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=140454">uevib</a>
+</li><li title="时间: 11:13
+操作: 无效的越权访问 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=139930.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=139930">qiannanzhuan1</a>
+</li><li title="时间: 10:49
+操作: 浏览帖子 
+版块: ★ CentOS 攻略全实录 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=139856.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=139856">www.jipao.com</a>
+</li><li title="时间: 10:47
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=139829.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=139829">newyork0744</a>
+</li><li title="时间: 11:08
+操作: 无效的越权访问 
+版块: ★ CentOS 攻略全实录 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=138466.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=138466">simao521342</a>
+</li><li title="时间: 10:48
+操作: 无效的越权访问 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=137265.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=137265">彩馨纳</a>
+</li><li title="时间: 10:41
+操作: 查看使用帮助 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=137178.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=137178">czgm5441</a>
+</li><li title="时间: 10:40
+操作: 无效的越权访问 
+版块: ★ 闲 聊 区 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=137117.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=137117">然翻电机</a>
+</li><li title="时间: 11:11
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=137027.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=137027">荣荣峰斌</a>
+</li><li title="时间: 10:43
+操作: 浏览帖子 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=136682.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=136682">滨奈凡卓</a>
+</li><li title="时间: 10:42
+操作: 无效的越权访问 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=135810.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=135810">zerosoft33</a>
+</li><li title="时间: 11:17
+操作: 浏览帖子 
+版块: ★ 闲 聊 区 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=135603.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=135603">espqe</a>
+</li><li title="时间: 11:05
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=135236.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=135236">fespj</a>
+</li><li title="时间: 10:29
+操作: 浏览帖子 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=134572.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=134572">mekjerft</a>
+</li><li title="时间: 10:30
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=134466.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=134466">955457cee</a>
+</li><li title="时间: 10:31
+操作: 查看使用帮助 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=134453.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=134453">oqmo5297</a>
+</li><li title="时间: 11:06
+操作: 浏览帖子 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=134337.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=134337">新车网_e</a>
+</li><li title="时间: 10:44
+操作: 浏览帖子 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=133328.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=133328">莱娣孤gh</a>
+</li><li title="时间: 10:55
+操作: 无效的越权访问 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=132445.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=132445">钰莼彩P9</a>
+</li><li title="时间: 10:41
+操作: 无效的越权访问 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=131304.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=131304">akgsm</a>
+</li><li title="时间: 10:44
+操作: 浏览论坛首页 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=130360.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=130360">yuli00152</a>
+</li><li title="时间: 11:14
+操作: 无效的越权访问 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=129954.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=129954">ueqqf</a>
+</li><li title="时间: 11:00
+操作: 浏览帖子 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=129917.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=129917">www.xmglzy.cn</a>
+</li><li title="时间: 10:51
+操作: 查看使用帮助 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=129771.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=129771">yushenom</a>
+</li><li title="时间: 10:36
+操作: 浏览帖子 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=127401.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=127401">华仔</a>
+</li><li title="时间: 11:10
+操作: 无效的越权访问 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=126832.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=126832">parter318</a>
+</li><li title="时间: 11:03
+操作: 浏览帖子 
+版块: ★ CentOS 基础教学 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=125633.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=125633">keyici237</a>
+</li><li title="时间: 11:12
+操作: 提示信息/页面跳转 ">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=123752.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=123752">y72dxssxx171</a>
+</li><li title="时间: 11:17
+操作: 浏览帖子 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=123613.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=123613">csbyo</a>
+</li><li title="时间: 10:33
+操作: 查看使用帮助 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=120061.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=120061">wstr7289</a>
+</li><li title="时间: 11:09
+操作: 无效的越权访问 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=119660.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=119660">wjdff</a>
+</li><li title="时间: 11:19
+操作: 查看使用帮助 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=119515.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=119515">iizy7886</a>
+</li><li title="时间: 11:09
+操作: 无效的越权访问 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=113515.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=113515">8451soso00</a>
+</li><li title="时间: 11:00
+操作: 浏览论坛版块 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=110082.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=110082">pypefleense</a>
+</li><li title="时间: 10:53
+操作: 浏览帖子 
+版块: ★ 应用技巧 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=99171.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=99171">sflah</a>
+</li><li title="时间: 11:21
+操作: 查看使用帮助 
+版块: ★ 站务 & 建议 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=90527.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=90527">slkk5424</a>
+</li><li title="时间: 11:28
+操作: 浏览论坛版块 
+版块: ★ 问题解答 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=83408.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=83408">uvwx041</a>
+</li><li title="时间: 10:50
+操作: 无效的越权访问 
+版块: ★ 闲 聊 区 ★">
+<img src="online_member.gif" tppabs="http://www.centospub.com/bbs/images/common/online_member.gif" alt="" />
+<a href="space.php-uid=79244.htm" tppabs="http://www.centospub.com/bbs/space.php?uid=79244">oih58oxg7</a>
+</li></ul>
+</dd>
+</dl>
+</div>
+
+</div></div>
+
+</div><div class="ad_footerbanner" id="ad_footerbanner1"></div>
+<div id="footer">
+<div class="wrap s_clear">
+<div id="footlink">
+<p>
+<strong><a href="index.htm" tppabs="http://www.centospub.com/" target="_blank">CentOS Pub  --- 中文 CentOS 攻略站</a></strong>
+<span class="pipe">|</span><a href="mailto:centospub@gmail.com">联系我们</a>
+<span class="pipe">|</span><a href="index-2.htm" tppabs="http://www.centospub.com/bbs/archiver/" target="_blank">Archiver</a><span class="pipe">|</span><a href="index.php.htm" tppabs="http://www.centospub.com/bbs/wap/" target="_blank">WAP</a></p>
+<p class="smalltext">
+GMT+8, 2012-8-20 11:28.
+</p>
+</div>
+<div id="rightinfo">
+<p>Powered by <strong><a href="javascript:if(confirm('http://www.discuz.net/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.discuz.net/'" tppabs="http://www.discuz.net/" target="_blank">Discuz!</a></strong> <em>7.2</em></p>
+<p class="smalltext">&copy; 2001-2009 <a href="javascript:if(confirm('http://www.comsenz.com/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?'))window.location='http://www.comsenz.com/'" tppabs="http://www.comsenz.com/" target="_blank">Comsenz Inc.</a></p>
+</div></div>
+</div>
+</body>
+</html>
